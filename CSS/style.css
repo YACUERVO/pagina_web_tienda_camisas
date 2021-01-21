@@ -3,7 +3,8 @@
 :root {
     --primario: #1a87dc;
     --primarioOsucuro: #049404;
-    --secundario: #f00707;
+    --primarioClaro: #3f8ecc;
+    --secundario: #fffb00;
     --secundarioOscuro: rgb(233, 287, 2);
     --blanco: #ffffff;
     --negro: #000000;
@@ -63,6 +64,7 @@ h3 {
 
 h1 {
     font-size: 4rem;
+    font-weight: lighter;
 }
 
 h2 {
@@ -87,6 +89,21 @@ h3 {
 }
 
 
+/* footer */
+
+.footer {
+    background-color: var(--primarioOsucuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto {
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
 /* navegacion */
 
 .navegacion {
@@ -94,17 +111,71 @@ h3 {
     padding: 1rem 0;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    /* gap: 2rem; */
     /* prpiedad que permite dar una separacion a los bloques de flexbox */
 }
 
 .navegacion__enlace {
     font-family: var(--fuentePrincipal);
-    color: #000000;
-    font-size: 3rem;
+    color: var(--blanco);
+    font-size: 4rem;
+    margin-right: 2rem;
+}
+
+.navegacion__enlace:last-of-type {
+    /* pseudoselector para quitarle la margen al ultimo elemento del margin-right aplicado en la navegacion del enlace */
+    margin-right: 0;
 }
 
 .navegacion__enlace--activo,
 .navegacion__enlace:hover {
     color: var(--secundario);
+}
+
+
+/* Grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    /* separacion entre columnas */
+    row-gap: 2rem;
+    /* separacion entre filas */
+}
+
+@media (min-width: 780px) {
+    /* para pantallas superiore de 780 px */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* productos */
+
+.producto {
+    background-color: var(--primarioClaro);
+    padding: 1rem;
+}
+
+.producto__imagen {
+    width: 100%;
+}
+
+.producto__nombre {
+    font-size: 4rem;
+}
+
+.producto__precio {
+    font-size: 3.8rem;
+    color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
 }
