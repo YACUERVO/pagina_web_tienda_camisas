@@ -27,8 +27,30 @@
         <a class="navegacion__enlace " href="nosotros.html ">Nosotros</a>
     </nav>
 
-    <main class="contenedor "></main>
-    <h1>Producto</h1>
+    <main class="contenedor ">
+        <h1>React JS</h1>
+        <div class="camisa ">
+            <img class="camisa__imagen " src="img/3.jpg " alt="imagen del producto ">
+            <div class="camisa__contenido ">
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
+            
+                <form class="formulario ">
+                    <select class="formulario__campo ">
+                        <option disabled selected>--Seleccionar Talla--</option>
+                        <!-- para que se desabilita a la hora de sellecionar los otros items -->
+                        <option>Pequeña</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+
+                    <input class="formulario__campo " type="number " placeholder="cantidad " min="1 ">
+                    <input  class="formulario__submit " type="submit " value="Agregar al Carrito ">
+                    <!-- boton para agregar el carrito  -->
+                </form>
+            </div>
+        </div>
+    </main>
+    
 
     <footer class="footer ">
         <p class="footer__texto ">Front End Store - Todos los derechos  reservados 2022</p>
